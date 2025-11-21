@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f6f6ff;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #6b34d4;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul li {
+  margin-left: 25px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+header ul li a:hover {
+  color: #6b34d4;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  margin-top: 80px;
+}
+
+.hero-text h2 {
+  font-size: 40px;
+}
+
+.hero-text span {
+  color: #6b34d4;
+}
+
+.btn {
+  padding: 12px 22px;
+  background: #6b34d4;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.about, .projects, .contact {
+  padding: 70px 60px;
+}
+
+.projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6b34d4;
+}
+
+.project-box {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #6b34d4;
+  color: white;
+  margin-top: 40px;
+}
