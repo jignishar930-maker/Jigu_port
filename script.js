@@ -1,13 +1,28 @@
-window.addEventListener("scroll", () => {
-  let nav = document.querySelector("header");
+/* ------------------ CUSTOM CURSOR ------------------ */
+const cursor = document.querySelector(".cursor");
 
-  if (window.scrollY > 50) {
-    nav.style.boxShadow = "0 3px 10px rgba(0,0,0,0.2)";
-  } else {
-    nav.style.boxShadow = "none";
-  }
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.pageX + "px";
+  cursor.style.top = e.pageY + "px";
 });
 
-function sayHello() {
-  alert("Thanks for visiting my portfolio, Have a nice day 😊");
-}
+/* ------------------ DARK MODE TOGGLE ------------------ */
+const toggle = document.getElementById("darkToggle");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+});
+
+/* ------------------ FADE ANIMATION ON SCROLL ------------------ */
+const faders = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+faders.forEach((fade) => observer.observe(fade));
